@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(191, 215, 248);    
+}	    
+/*grid card*/
+section{
+    margin: 5rem auto;
+    max-width: 73.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    grid-gap: 2rem;
+    background-color: rgb(210, 233, 239);
+    padding: 2.5rem;
+
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 100px 70px 100px 20px 80px;
+    justify-items: center;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    padding-top: 1.5rem;
+}
+
+.card h1 {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(99, 115, 146);
+}
+
+.card p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(150, 164, 192);
+    padding: 0 15px;
+}
+
+.card hr {
+    width: 20%;
+    height: 2px;
+    background-color: rgb(154, 163, 180);
+    margin: 10px auto;
+}
+
+.button {
+    height: 30px;
+    width: 110px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    color: rgb(150, 164, 192);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(28, 155, 229);
+    color: white;
+    box-shadow: 0 5px 5px rgba(152, 149, 149, 0.5);
+}
+
+.card:hover hr{
+    color: white;
+}
+
+.card:hover{
+    box-shadow: 0 10px 10px  rgba(152, 149, 149, 0.5);
+}
+    
+

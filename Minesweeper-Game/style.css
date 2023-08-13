@@ -1,0 +1,154 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    font-family: 'PixelOperatorMonohbRegular';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the title and description */
+.game-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.game-description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Main container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Box containing the grid */
+.game-box {
+    background-color: rgb(211, 211, 211);
+    
+    border-top: 1.56em ridge;
+    border-right: 1.125em solid white;
+    border-bottom: 1.56em ridge;
+    border-left: 1.56em ridge rgb(201, 198, 198);
+}
+
+/* Grid styles using Flexbox */
+.game-grid {
+    display: flex;
+    flex-direction: column;    
+    height: 100%;
+}
+
+.game-row {
+    display: flex;
+    text-align:center;
+}
+
+.game-cell {
+    flex-basis: 12.5%;
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5mm dashed black;
+    border-left-width: 0;
+    border-top-width: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.game-cell img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cell-blue, .cell-one {
+    color: #0101ff;
+}
+
+.cell-green, .cell-two {
+    color: rgb(19, 151, 4);
+}
+
+.cell-red, .cell-three {
+    color: rgb(220, 35, 35);
+}
+
+.cell-hidden {
+    display: block;
+    border: 8px outset;
+    border-color: rgb(255, 252, 252);
+}
+
+
+
+/* Style for the "Game Over" message */
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.game-over button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(211, 211, 211);
+    color: black;
+    border-color: rgb(255, 252, 252);
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .game-cell {
+        font-size: 1.5em;
+    }
+
+    .game-title {
+        font-size: 2.25em;
+    }
+
+    .game-description {
+        font-size: 1.125em;
+    }
+
+    .game-over {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .game-cell {
+        font-size: 1.25em;
+    }
+
+    .game-title {
+        font-size: 2em;
+    }
+
+    .game-description {
+        font-size: 1em;
+    }
+
+    .game-over {
+        font-size: 1.25em;
+    }
+}

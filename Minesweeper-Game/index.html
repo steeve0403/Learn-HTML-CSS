@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" type="text/css"/>
+    <title>Minesweeper Game</title>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">Minesweeper</h1>
+        <p class="game-description">Click on the cells to reveal hidden tiles, avoid the bombs!</p>
+        <div class="game-box">
+            <div class="game-grid">
+                <!-- Row 1 -->
+                <div class="game-row">
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell"></div>
+                </div>
+                <!-- Row 2 -->
+                <div class="game-row">
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell"></div>
+                </div>
+                <!-- Row 3 -->
+                <div class="game-row">
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    
+                </div>
+                <!-- Row 4 -->
+                <div class="game-row">
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell"></div>
+                </div>
+                <!-- Row 5 -->
+                <div class="game-row">
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell"></div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-blue">1</div>
+                    <div class="game-cell cell-blue">1</div>
+                </div>
+                <!-- Row 6 -->
+                <div class="game-row">
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-red">3</div>
+                    <div class="game-cell cell-red">3</div>
+                    <div class="game-cell cell-red">3</div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-green">2</div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-hidden" data-content="1"></div>
+                </div>
+                <!-- Row 7 -->
+                <div class="game-row">
+                    <div class="game-cell cell-hidden" data-content="1"></div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-hidden" data-content="3"></div>
+                    <div class="game-cell cell-red">3</div>
+                    <div class="game-cell cell-hidden" data-content="2"></div>
+                    <div class="game-cell cell-hidden" data-content="1"></div>
+                </div>
+                <!-- Row 8 -->
+                <div class="game-row">
+                    <div class="game-cell cell-hidden" data-content="bomb"></div>
+                    <div class="game-cell cell-hidden" data-content="1"></div>
+                    <div class="game-cell cell-hidden" data-content="3"></div>
+                    <div class="game-cell cell-hidden" data-content="2"></div>
+                    <div class="game-cell cell-hidden" data-content="2"></div>
+                    <div class="game-cell cell-bomb"><img src="bomb.gif" alt="Bomb"></div>
+                    <div class="game-cell cell-hidden" data-content="bomb"></div>
+                    <div class="game-cell cell-hidden" data-content="1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="game-over">
+            <p>GAME OVER</p>
+            <button id="restartButton">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

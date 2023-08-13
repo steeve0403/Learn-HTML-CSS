@@ -1,0 +1,13 @@
+@import 'scss/abstracts/variables';
+@import 'scss/abstracts/mixins';
+
+@import 'scss/base/reset';
+@import 'scss/base/typography';
+
+
+@import 'scss/components/buttons';
+@import 'scss/components/header';
+@import 'scss/components/content';
+@import 'scss/components/footer';
+
+@import 'scss/layout/layout';

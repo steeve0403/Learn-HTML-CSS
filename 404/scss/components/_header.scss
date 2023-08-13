@@ -1,0 +1,63 @@
+.site-header {
+    background-color: $header-bg-color;
+    color: $header-text-color;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-button {
+        cursor: pointer;
+        margin-right: 15px;
+
+        .menu-icon {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: $text-color;
+            margin: 6px auto;
+            transition: transform 0.3s;
+        }
+    }
+}
+
+.main-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: $text-color;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 2;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        display: block;
+        padding: 5px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+.menu-button.active .menu-icon {
+    transform: rotate(90deg);
+}
+

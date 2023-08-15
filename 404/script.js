@@ -1,6 +1,17 @@
 // Selectors
 const menuIcon = document.querySelector('.menu-icon');
 const navLinks = document.querySelector('.nav-links');
+
+/************ Menu Responsive ************/
+// Event listener for the "menu" button
+menuIcon.addEventListener('click', () => {
+  document.querySelector('.navbar').classList.toggle('active');
+});
+
+/************ Hangman Game  ************/
+
+// Selectors
+
 const hangmanDisplay = document.getElementById('hangman-display');
 const letterInput = document.getElementById('letter-input');
 const guessButton = document.getElementById('guess-button');

@@ -1,265 +1,315 @@
 /* Reset margins and paddings */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Body of the page */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Animation to change background color */
+  animation: changeBgColor 5s linear infinite;
 }
-  
+
+/* Header section */
+header {
+  width: 100%;
+}
+
+/* Navigation bar */
 .navbar {
-    background-color: #410000;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-  
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-  
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-  
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-  
-.nav-links li a:hover {
-    color: #f39c12;
-}
-  
-.menu-icon {
-    display: none;
+  background-color: #410000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.page-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f90000;
-    overflow: hidden;
-    animation: changeBgColor 5s linear infinite;
-}
-
+/* Animation to change background color of the navigation bar */
 @keyframes changeBgColor {
-    0% {
-      background-color: rgba(237, 89, 89, 0.8);
-    }
-    50% {
-      background-color: rgba(150, 9, 9, 0.8);
-    }
-    100% {
-      background-color: rgba(237, 89, 89, 0.8);
-    }
+  0% {
+    background-color: rgba(237, 89, 89, 0.8);
+  }
+  50% {
+    background-color: rgba(150, 9, 9, 0.8);
+  }
+  100% {
+    background-color: rgba(237, 89, 89, 0.8);
+  }
 }
-  
+
+/* Navigation logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Styling for navigation links */
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+/* Hover effect on navigation links */
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* Menu icon for small screens */
+.menu-icon {
+  display: none;
+}
+
+/* Page content section */
+.page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f90000;
+  overflow: hidden;
+}
+
+/* Main container */
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fadeInDown 1s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transform: translate(-50%, -50%) translateY(-20px);
-    animation: fadeIn 1s ease-in-out 0.5s forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Animation to fade in the container */
+  animation: fadeInDown 1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(-20px);
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
+
+/* Keyframes animation for fading in */
 @keyframes fadeIn {
-    to {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
+/* Styling for the error code */
 .error-code {
-    font-size: 72px;
-    font-weight: bold;
-    color: #ff4c4c;
-    margin-bottom: 10px;
-    animation: blinkCode 2s infinite alternate;
+  font-size: 72px;
+  font-weight: bold;
+  color: #ff4c4c;
+  margin-bottom: 10px;
+  /* Animation for blinking effect */
+  animation: blinkCode 2s infinite alternate;
 }
 
+/* Keyframes animation for blinking */
 @keyframes blinkCode {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0.5;;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 
+/* Styling for the error message */
 .error-message {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
+/* Styling for the "Home" button */
 .btnHome {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    animation: pulseBtn 1.5s ease-in-out infinite;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  /* Animation for pulsating effect */
+  animation: pulseBtn 1.5s ease-in-out infinite;
 }
 
+/* Hover effect on the "Home" button */
 .btnHome:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
+/* Keyframes animation for pulsating effect */
 @keyframes pulseBtn {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
+/* Styling for the error image */
 .error-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .error-message p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .error-message a {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .error-message a:hover {
-    text-decoration: underline;
-  }
-  
-  .memory-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .memory-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .memory-button:hover {
-    background-color: #2980b9;
-  }
-  
-  .start-button, .restart-button {
-    background-color: #27ae60;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .restart-button {
-    background-color: #e74c3c;
-  }
-  
-  .start-button:hover, .restart-button:hover {
-    background-color: #219f7e;
-  }
-
-  
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 40px;
-        left: 0;
-        width: 100%;
-        padding: 2rem;
-        text-align: center;
-        opacity: 0.95;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.3s;
-        z-index: 999;
-    }
-  
-    .navbar.active .nav-links {
-        display: flex;
-        transform: scaleY(1);
-    }
-
-    .menu-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        transition: transform 0.3s;
-    }
-  
-    .bar {
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        transition: transform 0.3s;
-    }
-    
-    .navbar.active .menu-icon {
-        transform: rotate(45deg);
-    }
-    
-    .navbar.active .menu-icon .bar:nth-child(1) {
-        transform: translateY(7px) rotate(-180deg);
-    }
-    
-    .navbar.active .menu-icon .bar:nth-child(2) {
-        transform: scale(0);
-    }
-    
-    .navbar.active .menu-icon .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(90deg);
-    }    
+  max-width: 100%;
+  height: auto;
 }
+
+/* Styling for paragraphs within the error message */
+.error-message p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling for links within the error message */
+.error-message a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effect on links within the error message */
+.error-message a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the hangman container */
+.hangman-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the hangman display */
+.hangman-display {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* Styling for the letter input */
+.letter-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Styling for the guess button */
+.guess-button, .restart-button {
+  background-color: #cc5f5f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect on the guess button */
+.guess-button:hover, .restart-button:hover {
+  background-color: #2980b9;
+}
+
+/* Styling for the result message */
+.result-message {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Media query for screens with maximum width of 768px */
+@media screen and (max-width: 768px) {
+  /* Styling for navigation links on small screens */
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      opacity: 0.95;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s;
+      z-index: 999;
+  }
+
+  /* Display navigation links when navbar is active on small screens */
+  .navbar.active .nav-links {
+      display: flex;
+      transform: scaleY(1);
+  }
+
+  /* Styling for the menu icon on small screens */
+  .menu-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+  }
+
+  /* Styling for the bars in the menu icon */
+  .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      transition: transform 0.3s;
+  }
+  
+  /* Rotation and transformation of bars in the menu icon when active */
+  .navbar.active .menu-icon {
+      transform: rotate(45deg);
+  }
+  
+  .navbar.active .menu-icon .bar:nth-child(1) {
+      transform: translateY(7px) rotate(-180deg);
+  }
+  
+  .navbar.active .menu-icon .bar:nth-child(2) {
+      transform: scale(0);
+  }
+  
+  .navbar.active .menu-icon .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(90deg);
+  }    
+}
+
   

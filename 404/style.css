@@ -58,6 +58,7 @@ header {
 
 /* Navigation links */
 .nav-links {
+
   list-style: none;
   display: flex;
   gap: 20px;
@@ -309,7 +310,16 @@ header {
   
   .navbar.active .menu-icon .bar:nth-child(3) {
       transform: translateY(-9px) rotate(90deg);
-  }    
+  }
+  
+  
+}
+
+@media screen and (max-width: 400px) {
+  .hangman-display {
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }
 
   

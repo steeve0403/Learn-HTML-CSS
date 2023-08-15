@@ -2,6 +2,9 @@
 
 This project is a custom 404 error page that provides a visually appealing and interactive experience for users who encounter a page not found error.
 
+![Demo 404 Preview](./screenshot.png)
+![Demo 404 Preview](./screenshot2.jpg)
+
 ## 📖 Table of Contents
 
 - [Description](#description)
